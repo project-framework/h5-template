@@ -46,6 +46,14 @@ export default defineConfig(({ command, mode }) => {
                     }),
                 ],
             },
+            // css 预处理器
+            preprocessorOptions: {
+                scss: {
+                    // 引入 variables.scss 即可在全局中使用自定义变量（注意结尾有 ; ）
+                    // additionalData: `$injectedColor: orange;`,
+                    additionalData: '@import "@/styles/variables.scss";',
+                },
+            },
         },
     };
 });

@@ -15,7 +15,7 @@ import HelloWorld from './components/HelloWorld.vue';
     <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .logo {
     height: 6em;
     padding: 1.5em;
@@ -29,6 +29,6 @@ import HelloWorld from './components/HelloWorld.vue';
     filter: drop-shadow(0 0 2em #42b883aa);
 }
 .aa {
-    width: 20px;
+    width: 200px;
 }
 </style>
