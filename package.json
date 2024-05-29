@@ -2,17 +2,19 @@
   "name": "map-h5",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "postcss": "^8.4.38",
+    "postcss-pxtorem": "^6.1.0",
     "vant": "^4.9.0",
     "vue": "^3.4.21"
   },
   "devDependencies": {
+    "@types/node": "^20.12.12",
     "@vant/auto-import-resolver": "^1.2.1",
     "@vitejs/plugin-vue": "^5.0.4",
     "typescript": "^5.2.2",
