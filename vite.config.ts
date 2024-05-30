@@ -5,9 +5,10 @@ import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver } from '@vant/auto-import-resolver';
 import postcsspxtoviewport from 'postcss-px-to-viewport';
+import autoprefixer from 'autoprefixer';
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command, mode }) => {
+export default defineConfig((/* { command, mode } */) => {
     return {
         base: './',
         resolve: {
@@ -29,6 +30,18 @@ export default defineConfig(({ command, mode }) => {
         css: {
             postcss: {
                 plugins: [
+                    autoprefixer({
+                        // 自动添加前缀
+                        overrideBrowserslist: [
+                            'Android 4.1',
+                            'iOS 7.1',
+                            'Chrome > 31',
+                            'ff > 31',
+                            'ie >= 8',
+                            //'last 2 versions', // 所有主流浏览器最近2个版本
+                        ],
+                        grid: true,
+                    }),
                     // 配置参数：https://github.com/evrone/postcss-px-to-viewport/blob/master/README_CN.md#%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0
                     postcsspxtoviewport({
                         unitToConvert: 'px', // 要转化的单位
