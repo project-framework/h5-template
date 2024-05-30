@@ -1,0 +1,68 @@
+%flex {
+    display: flex;
+}
+
+@mixin display($attr) {
+    display: $attr;
+}
+
+@mixin justify($attr) {
+    justify-content: $attr;
+}
+
+@mixin item($attr) {
+    align-items: $attr;
+}
+
+@mixin flex($attr) {
+    flex: $attr;
+}
+
+@mixin flexDirection($attr) {
+    flex-direction: $attr;
+}
+
+@mixin text($size, $height) {
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin height($height) {
+    height: $height;
+}
+
+@mixin width($width) {
+    width: $width;
+}
+
+@mixin position($position) {
+    position: $position;
+}
+
+@mixin textAlign($align) {
+    text-align: $align;
+}
+
+@mixin textIndent($value) {
+    text-indent: $value;
+}
+
+@mixin borderRadius($value) {
+    border-radius: $value;
+}
+
+@mixin bgc($color) {
+    background-color: $color;
+}
+
+@mixin align($attr) {
+    vertical-align: $attr;
+}
+
+@mixin margin($value) {
+    margin: $value;
+}
+
+@mixin float($attr) {
+    float: $attr;
+}

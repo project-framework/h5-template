@@ -1,0 +1,196 @@
+/**
+ * 自定义全局样式类名
+ * 更多命名规范参考 Tailwindcss：https://www.tailwindcss.cn/docs/installation
+ */
+
+@import './mixins.scss';
+
+// 布局
+
+.inline {
+    @include display(inline);
+}
+
+.inline-block {
+    @include display(inline-block);
+}
+
+.block {
+    @include display(block);
+}
+
+.inline-flex {
+    @include display(inline-flex);
+}
+
+.flex {
+    @extend %flex;
+}
+
+.flex-col {
+    @include flexDirection(column);
+}
+
+.justify-center {
+    @include justify(center);
+}
+
+.items-center {
+    @include item(center);
+}
+
+.flex-center {
+    @extend %flex;
+    @include justify(center);
+    @include item(center);
+}
+
+.flex-between {
+    @extend %flex;
+    @include justify(space-between);
+}
+
+.flex-evenly {
+    @extend %flex;
+    @include justify(space-evenly);
+}
+
+.flex-1 {
+    @include flex(1 1 0%);
+}
+
+.flex-auto {
+    @include flex(1 1 auto);
+}
+
+.relative {
+    @include position(relative);
+}
+
+.absolute {
+    @include position(absolute);
+}
+
+.absolute-center {
+    @include position(absolute);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fixed {
+    @include position(fixed);
+}
+
+.sticky {
+    @include position(sticky);
+}
+
+.float-left {
+    @include float(left);
+}
+
+.float-right {
+    @include float(right);
+}
+
+// 尺寸
+
+.w-full {
+    @include width(100%);
+}
+
+.w-screen {
+    @include width(100vh);
+}
+
+.h-full {
+    @include height(100%);
+}
+
+.h-screen {
+    @include height(100vh);
+}
+
+// 交互
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// 排版
+
+// .text-xs {
+//     @include text(var(--g-font-size-xs), var(--g-line-height-xs));
+// }
+
+// .text-sm {
+//     @include text(var(--g-font-size-sm), var(--g-line-height-sm));
+// }
+
+// .text-base {
+//     @include text(var(--g-font-size-md), var(--g-line-height-md));
+// }
+
+// .text-lg {
+//     @include text(var(--g-font-size-lg), var(--g-line-height-lg));
+// }
+
+.text-center {
+    @include textAlign(center);
+}
+
+.text-left {
+    @include textAlign(left);
+}
+
+.indent-2 {
+    @include textIndent(0.5rem);
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.align-middle {
+    @include align(middle);
+}
+
+// 间隔
+// .mt-24 {
+//     @include margin(var(--g-space-lg) 0 0 0)
+// }
+
+// .mb-24 {
+//     @include margin(0 0 var(--g-space-lg) 0)
+// }
+
+.mb-12 {
+    @include margin(0 0 12px 0);
+}
+
+// 边框
+
+.rounded-none {
+    @include borderRadius(0px);
+}
+
+// .rounded-md {
+//     @include borderRadius(var(--g-radius-md))
+// }
+
+// 背景
+
+// .bg-white {
+//     @include bgc(var(--g-white-1))
+// }
+
+// .bg-black {
+//     @include borderRadius(var(--g-black-1))
+// }
+
+.bg-transparent {
+    @include borderRadius(transparent);
+}
